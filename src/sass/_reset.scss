@@ -1,0 +1,220 @@
+@page {
+  size: A4; }
+
+@page :left {
+  margin-left: 2cm; }
+
+@page :right {
+  margin-left: 2cm; }
+
+@media print {
+  * {
+    color: #000; }
+  header, footer {
+    display: none; }
+  .header-artwork {
+    display: none; }
+  h2 {
+    margin-bottom: 0.5cm; }
+  h1 {
+    page-break-before: always; } }
+
+/*------------------------------------*  #BOX-SIZING
+\*------------------------------------*/
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+html {
+  box-sizing: border-box;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+  html,body {
+    height: 100%;
+  }
+:root {
+  --bg: hsl(0, 0%, 98%);
+  --bg-offset: hsl(0, 0%, 100%);
+  --text: hsl(200, 15%, 8%);
+  --gray: hsl(0, 0%, 52%);
+  --border: rgba(0,0,0,.1);
+}
+[data-theme="light"] {
+  --bg: hsl(0, 0%, 98%);
+  --bg-offset: hsl(0, 0%, 100%);
+  --text: hsl(200, 15%, 8%);
+  --gray: hsl(0, 0%, 52%);
+  --border: rgba(0,0,0,.1);
+}
+[data-theme="dark"] {
+  --bg: hsl(207, 26%, 17%);
+  --bg-offset: hsl(209, 23%, 22%);
+  --text: hsl(0, 0%, 100%);
+  --border: rgba(255,255,255,.1);
+
+}
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0; }
+
+/*------------------------------------*  #SHARED
+\*------------------------------------*/
+/**
+ * Shared declarations for certain elements.
+ */
+/**
+ * Always declare margins in the same direction:
+ * csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+input,
+textarea,
+button {
+  font-family: inherit; }
+
+textarea {
+  resize: none; }
+
+/*------------------------------------*  #PAGE
+\*------------------------------------*/
+/**
+ * Page-level styling (e.g. HTML and BODY elements).
+ */
+ 
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: var(--bg);
+    color: var(--text)
+  } 
+  
+  /* :focus {
+    box-shadow: 0 0 3px rgba(0,0,0,.75);
+  } */
+  
+  /*------------------------------------*  #HEADINGS
+  \*------------------------------------*/
+  /**
+   * Simple default styles for headings 1 through 6.
+   */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+ h1 {
+   font-size: 22px;
+ }
+ 
+ 
+  /*------------------------------------*  #PARAGRAPHS
+  \*------------------------------------*/
+  /**
+   * Basic styling for paragraphs.
+   */
+  p {
+    line-height: 1.4;
+    max-width: 50em;
+    margin-bottom: 1.5em;
+    font-size: var(--font-size);
+   }
+   p.margin-btm-reset {
+     margin-bottom: 0px;
+   }
+    
+  /*------------------------------------*  #LINKS
+  \*------------------------------------*/
+  /**
+   * Default styles for simple hyperlinks.
+   */
+  a {
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+
+    button {
+      background: transparent;
+      cursor: pointer;
+      border: 0;
+    }
+   
+  
+  /*------------------------------------*  #LISTS
+  \*------------------------------------*/
+  /**
+   * Remove trailing margins from nested lists.
+   */
+  li > ul,
+  li > ol {
+    margin-bottom: 0; }
+  
+  /**
+   * Visually offset definition titles from their definitions.
+   */
+  dt {
+    font-weight: 700; }
+  
+  /*------------------------------------*    #IMAGES
+  \*------------------------------------*/
+  /**
+   * 1. Fluid images for responsive purposes.
+   * 2. Offset `alt` text from surrounding copy.
+   * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+   *    elements when they are dropped into a page as-is. Safer alternative to
+   *    using `display: block;`.
+   */
+  img {
+    max-width: 100%;
+    /* [1] */
+    font-style: italic;
+    /* [2] */
+    vertical-align: middle;
+    /* [3] */ }
+  
+  /**
+   * 1. If a `width` and/or `height` attribute have been explicitly defined, let’s
+   *    not make the image fluid.
+   */
+  img[width],
+  img[height] {
+    /* [1] */
+    max-width: none; }
+    svg {
+      fill: currentColor;
+      vertical-align: middle;
+    }
+  
+  /*------------------------------------*  #QUOTES
+  \*------------------------------------*/
+  /**
+   * Basic styling for quoted text.
+   */
+  q {
+    quotes: "‘" "’"; }
+    q:before {
+      content: open-quote; }
+    q:after {
+      content: close-quote; }
+  
+  blockquote {
+    quotes: "“" "”"; }
+ol,ul {
+  list-style: none;
+}
+svg {
+  fill: currentColor;
+  vertical-align: middle;
+
+  
+}

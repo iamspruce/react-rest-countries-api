@@ -1,0 +1,30 @@
+.wrapper {
+    width: 84%;
+    max-width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.marginBtm {
+    margin-bottom: 4em;
+}
+.container {
+    display: flex;
+}
+
+/* flex utilities */
+.flex {
+    display: flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.f-center-x {
+    justify-content: center;
+}
+.f-center-y {
+    align-items: center;
+}
+.f-btw {
+    justify-content: space-between;
+
+}
