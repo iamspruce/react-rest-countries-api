@@ -42,11 +42,26 @@
 }
 
 /* card view */
+article {
+    
 
-@media (max-width: 375px) {
-    article {
-        flex-wrap: wrap;
+    .article-main {
+        margin-top: 2em
     }
+}
+@media (min-width: 600px) {
+    article {
+        display: grid;
+    grid-gap: 10%;
+    grid-template-columns: repeat( auto-fill, minmax(45%, 1fr) );
+
+    .article-main {
+        margin-top: 0em
+    }
+    }
+}
+@media (max-width: 375px) {
+    
     .article-main {
 
         h3 {

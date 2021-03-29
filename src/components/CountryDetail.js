@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const CountryDetail = ({flag, name, nativeName, population, region, subregion, capital, topLevelDomain, currencies, languages, borders}) => {
     return (
         <>
-        <article className="flex f-btw">
+        <article>
             <aside className="article-flag">
               <img src={flag} alt="" />
             </aside>

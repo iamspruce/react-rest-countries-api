@@ -28,14 +28,11 @@ const Country = ({ match }) => {
         }
       )
   }, []);
-
   if (error) {
     return (
       <>
         <div className="search-wrapper">
-          <Link to={'/'}>
             <Btn text={icon} altText="Back" className="btn" />
-          </Link>
         </div>
         <Error text={match.params.name} msg={error.message} />
       </>

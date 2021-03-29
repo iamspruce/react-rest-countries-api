@@ -11,14 +11,23 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Spruce blog</title>
-      <script>
-document.documentElement.setAttribute('data-theme', localStorage.getItem('data-theme'));
-let localData = localStorage.getItem('data-theme');
+    <title>Countries App</title>
+    <script>
+      document.documentElement.setAttribute('data-theme', localStorage.getItem('data-theme'));
     </script>
     </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <script>
+    let localData = localStorage.getItem('data-theme');
+    let btn = document.querySelector('header-btn');
+    if (localData == 'dark') {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active')
+    }
+
+  </script>
 </html>

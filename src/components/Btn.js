@@ -1,8 +1,8 @@
+
 const Btn = ({text, altText, className, onclick }) => {
-    
   function onclick() {
-    let Hbtn = document.querySelector('.header-btn');
-       Hbtn.classList.toggle('active');
+    const Hbtn = document.querySelector('.header-btn');
+        Hbtn.classList.toggle('active');
         if (Hbtn.classList.contains('active')) {
         localStorage.setItem('data-theme', 'dark');
        document.documentElement.setAttribute('data-theme', localStorage.getItem('data-theme'))
