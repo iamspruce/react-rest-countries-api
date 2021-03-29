@@ -5,7 +5,7 @@ import Loading from './Loading';
 import Error from './Error';
 import { Link } from 'react-router-dom';
 import { IoArrowBackOutline } from 'react-icons/io5';
-const icon = <IoArrowBackOutline size={28} />;
+const icon = <IoArrowBackOutline size={18} />;
 
 const BorderCountry = ({match}) => {
 const [error, setError] = useState(null);

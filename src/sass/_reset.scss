@@ -27,10 +27,13 @@
  */
 html {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 
 *, *:before, *:after {
+  font-family: inherit;
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -93,7 +96,6 @@ textarea {
  
   
   body {
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     background-color: var(--bg);
     color: var(--text)
@@ -191,8 +193,7 @@ textarea {
     /* [1] */
     max-width: none; }
     svg {
-      fill: currentColor;
-      vertical-align: middle;
+      margin-bottom: 3px;
     }
   
   /*------------------------------------*  #QUOTES

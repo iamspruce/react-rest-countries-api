@@ -5,7 +5,7 @@ import Loading from './Loading';
 import Error from './Error';
 import { Link } from 'react-router-dom';
 import { IoArrowBackOutline } from 'react-icons/io5';
-const icon = <IoArrowBackOutline size={28} />;
+const icon = <IoArrowBackOutline size={18} />;
 
 
 
@@ -32,7 +32,9 @@ const Country = ({ match }) => {
     return (
       <>
         <div className="search-wrapper">
+        <Link to={'/'}>
             <Btn text={icon} altText="Back" className="btn" />
+          </Link>
         </div>
         <Error text={match.params.name} msg={error.message} />
       </>

@@ -44,14 +44,12 @@ const CountryDetail = ({flag, name, nativeName, population, region, subregion, c
                 </div>
               </div>
               <div className="article-end">
-              <h4>Border Countries</h4>
-              <div>
+              <h4>Border Countries: </h4>
               {borders.map(border => (
                   <Link to={`/${name}/border/${border}`}><span>
                     {border}
                   </span></Link>
                 ))}
-              </div>
               </div>
             </div>
           </article>
