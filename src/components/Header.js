@@ -1,6 +1,6 @@
 import Btn from './Btn';
-import { WiMoonAltWaningGibbous6 } from 'react-icons/wi';
-const icon = <WiMoonAltWaningGibbous6 size={28} />;
+import {  HiOutlineMoon } from 'react-icons/hi';
+const icon = <HiOutlineMoon size={18} />;
 
 const Header = () => {
     function onclick() {

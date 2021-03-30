@@ -2,7 +2,15 @@
     background-color: var(--bg-offset);
     padding: 1em .2em;
     border-bottom: 1px solid var(--border);
-    color: var(--text)
+    color: var(--text);
+
+    h1 {
+      font-size: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
 }
 
 
@@ -12,11 +20,7 @@
     display: flex;
     justify-content: space-between;
 }
-@media (max-width: 400px) {
-  .not-mobile {
-    display: none;
-  }
-}
+
 @media (max-width: 375px) {
   
     .search-input {
@@ -138,6 +142,7 @@ select:focus + .focus {
 
     p {
       margin-top: 2em;
+      text-align: center;
     }
   }
   .loading {
@@ -149,15 +154,26 @@ select:focus + .focus {
 .header-btn {
   color: var(--text);
   padding: .6em;
+  
 
   svg {
+   fill: white; 
+   outline: currentColor;
   transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+}
+@media (max-width: 375px) {
+  .header-btn {
+
+    h1 {
+      max-width: 117px;
+    }
   }
 }
 .header-btn.active {
 
   svg {
-    transform: rotate(180deg);
+    fill: currentColor;
   }
 }
 
