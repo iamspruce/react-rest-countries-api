@@ -64,13 +64,16 @@ const Search = () => {
           <label htmlFor="search-form">
             <input type="search" name="search-form" id="search-form" className="search-input" placeholder="Search for..." value={q} onChange={(e) => setQ(e.target.value)}
             />
+            <span className="sr-only">
+              Search countries here
+            </span>
           </label>
           <div className="select">
           <select
                 onChange={e => {
                   setC(e.target.value);
                 }}
-                className="custom-select">
+                className="custom-select" aria-label="Filter Countries By Countries">
                 <option value="All">Filter By Region</option>
                 <option value="Africa">Africa</option>
                 <option value="Americas">America</option>
@@ -83,9 +86,11 @@ const Search = () => {
         </div>
         <ul className="card-grid">
           {search(items).map(item => (
-            <Link to={`/${item.name}`}>
+            <li>
+              <Link to={`/${item.name}`}>
               <Card id={item.callingCodes} flag={item.flag} name={item.name} population={item.population} region={item.region} capital={item.capital} />
             </Link>
+            </li>
           ))}
         </ul>
         <div className="marginBtm"></div>
